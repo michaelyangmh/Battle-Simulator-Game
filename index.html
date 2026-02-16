@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totally Fun Battle Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Rajdhani:wght@400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>⚔️ Totally Fun Battle Simulator ⚔️</h1>
+        </header>
+        
+        <div class="main-content">
+            <aside class="control-panel">
+                <div class="panel-section units-section">
+                    <h2>Select Unit</h2>
+                    <div class="unit-buttons">
+                        <!-- Basic Infantry -->
+                        <button class="unit-btn" data-unit="knight" title="Knight - Balanced melee fighter">
+                            <span class="icon">🗡️</span><span class="name">Knight</span>
+                        </button>
+                        <button class="unit-btn" data-unit="archer" title="Archer - Ranged attacker">
+                            <span class="icon">🏹</span><span class="name">Archer</span>
+                        </button>
+                        <button class="unit-btn" data-unit="warrior" title="Warrior - Balanced fighter">
+                            <span class="icon">⚔️</span><span class="name">Warrior</span>
+                        </button>
+                        <!-- Heavy Units -->
+                        <button class="unit-btn" data-unit="soldier" title="Soldier - Heavy infantry">
+                            <span class="icon">🛡️</span><span class="name">Soldier</span>
+                        </button>
+                        <button class="unit-btn" data-unit="pikeman" title="Pikeman - Long reach">
+                            <span class="icon">🔱</span><span class="name">Pikeman</span>
+                        </button>
+                        <!-- Ranged Units -->
+                        <button class="unit-btn" data-unit="crossbowman" title="Crossbowman - Precise ranged">
+                            <span class="icon">🎯</span><span class="name">Crossbowman</span>
+                        </button>
+                        <button class="unit-btn" data-unit="longbowman" title="Longbowman - Extreme range">
+                            <span class="icon">🎯</span><span class="name">Longbowman</span>
+                        </button>
+                        <button class="unit-btn" data-unit="marksman" title="Marksman - Fast shooter">
+                            <span class="icon">🔫</span><span class="name">Marksman</span>
+                        </button>
+                        <!-- Magic Units -->
+                        <button class="unit-btn" data-unit="mage" title="Mage - Magic attacker">
+                            <span class="icon">🔮</span><span class="name">Mage</span>
+                        </button>
+                        <button class="unit-btn" data-unit="wizard" title="Wizard - Powerful magic">
+                            <span class="icon">🧙</span><span class="name">Wizard</span>
+                        </button>
+                        <button class="unit-btn" data-unit="sorcerer" title="Sorcerer - Expert magic">
+                            <span class="icon">🧙‍♂️</span><span class="name">Sorcerer</span>
+                        </button>
+                        <button class="unit-btn" data-unit="warlock" title="Warlock - Dark magic">
+                            <span class="icon">🧟</span><span class="name">Warlock</span>
+                        </button>
+                        <!-- Healers -->
+                        <button class="unit-btn" data-unit="healer" title="Healer - Support unit">
+                            <span class="icon">💚</span><span class="name">Healer</span>
+                        </button>
+                        <button class="unit-btn" data-unit="priest" title="Priest - Strong healer">
+                            <span class="icon">✝️</span><span class="name">Priest</span>
+                        </button>
+                        <button class="unit-btn" data-unit="cleric" title="Cleric - Holy healer">
+                            <span class="icon">☪️</span><span class="name">Cleric</span>
+                        </button>
+                        <!-- Heavy Melee -->
+                        <button class="unit-btn" data-unit="barbarian" title="Barbarian - High damage">
+                            <span class="icon">🪓</span><span class="name">Barbarian</span>
+                        </button>
+                        <button class="unit-btn" data-unit="berserker" title="Berserker - Fast attacks">
+                            <span class="icon">😡</span><span class="name">Berserker</span>
+                        </button>
+                        <button class="unit-btn" data-unit="executioner" title="Executioner - High damage tank">
+                            <span class="icon">🗡️</span><span class="name">Executioner</span>
+                        </button>
+                        <button class="unit-btn" data-unit="gladiator" title="Gladiator - Agile fighter">
+                            <span class="icon">🎭</span><span class="name">Gladiator</span>
+                        </button>
+                        <!-- Cavalry -->
+                        <button class="unit-btn" data-unit="horseman" title="Horseman - Fast cavalry">
+                            <span class="icon">🐴</span><span class="name">Horseman</span>
+                        </button>
+                        <button class="unit-btn" data-unit="knight_rider" title="Knight Rider - Armored cavalry">
+                            <span class="icon">🐎</span><span class="name">Knight Rider</span>
+                        </button>
+                        <button class="unit-btn" data-unit="cavalry" title="Cavalry - Balanced cavalry">
+                            <span class="icon">🏇</span><span class="name">Cavalry</span>
+                        </button>
+                        <!-- Defensive -->
+                        <button class="unit-btn" data-unit="guardian" title="Guardian - Tanky defender">
+                            <span class="icon">🛡️</span><span class="name">Guardian</span>
+                        </button>
+                        <button class="unit-btn" data-unit="sentinel" title="Sentinel - Defensive guard">
+                            <span class="icon">🚪</span><span class="name">Sentinel</span>
+                        </button>
+                        <button class="unit-btn" data-unit="shield_bearer" title="Shield Bearer - Ultimate defense">
+                            <span class="icon">🛡️</span><span class="name">Shield Bearer</span>
+                        </button>
+                        <!-- Support -->
+                        <button class="unit-btn" data-unit="scout" title="Scout - Very fast">
+                            <span class="icon">🏃</span><span class="name">Scout</span>
+                        </button>
+                        <button class="unit-btn" data-unit="assassin" title="Assassin - High burst">
+                            <span class="icon">🗡️</span><span class="name">Assassin</span>
+                        </button>
+                        <button class="unit-btn" data-unit="ninja" title="Ninja - Fast & deadly">
+                            <span class="icon">🥷</span><span class="name">Ninja</span>
+                        </button>
+                        <!-- Special -->
+                        <button class="unit-btn" data-unit="dragon" title="Dragon - Epic beast">
+                            <span class="icon">🐉</span><span class="name">Dragon</span>
+                        </button>
+                        <button class="unit-btn" data-unit="golem" title="Golem - Massive HP">
+                            <span class="icon">🗿</span><span class="name">Golem</span>
+                        </button>
+                        <button class="unit-btn" data-unit="elemental" title="Elemental - Pure power">
+                            <span class="icon">🔥</span><span class="name">Elemental</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="panel-section">
+                    <h2>Select Team</h2>
+                    <div class="team-toggle">
+                        <button class="team-btn red active" data-team="red">🔴 Red Team</button>
+                        <button class="team-btn blue" data-team="blue">🔵 Blue Team</button>
+                    </div>
+                </div>
+                
+                <div class="panel-section">
+                    <h2>Actions</h2>
+                    <div class="action-buttons">
+                        <button id="startBtn" class="action-btn start">⚔️ Start Battle</button>
+                        <button id="resetBtn" class="action-btn reset">🔄 Reset</button>
+                        <button id="clearBtn" class="action-btn clear">🗑️ Clear Field</button>
+                    </div>
+                </div>
+                
+                <div class="panel-section stats">
+                    <h2>Battle Stats</h2>
+                    <div class="stat-row">
+                        <span class="red-stat">🔴 Red: <span id="redCount">0</span>/50</span>
+                        <span class="blue-stat">🔵 Blue: <span id="blueCount">0</span>/50</span>
+                    </div>
+                    <div id="battleStatus" class="battle-status">Place your soldiers!</div>
+                </div>
+            </aside>
+            
+            <main class="battlefield-container">
+                <canvas id="battlefield"></canvas>
+            </main>
+        </div>
+    </div>
+    
+    <div id="winnerOverlay" class="winner-overlay hidden">
+        <div class="winner-content">
+            <h2 id="winnerText">Red Team Wins!</h2>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
